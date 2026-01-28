@@ -1,0 +1,2237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Attorney Office</title>
+
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Bootstrap Icons -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<!-- AOS -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+<style>
+html, body{
+  width:100%;
+  max-width:100%;
+  overflow-x:hidden;
+  overflow-y:auto;
+}
+
+section{
+  /* position:relative; */
+  overflow:hidden;
+}
+
+
+
+/* ================= HERO ================= */
+
+.hero{
+min-height:100vh;
+background:url("https://images.unsplash.com/photo-1524995997946-a1c2e315a42f") center/cover no-repeat;
+position:relative;
+display:flex;
+align-items:center;
+justify-content:center;
+color:#fff;
+text-align:center;
+}
+
+.hero::before{
+content:"";
+position:absolute;
+inset:0;
+background:rgba(0,0,0,.55);
+}
+
+.hero-content{
+position:relative;
+max-width:800px;
+padding:20px;
+}
+
+.hero h1{
+font-size:3.5rem;
+font-weight:700;
+}
+
+.hero p{
+font-size:1.1rem;
+margin-top:20px;
+}
+
+.hero .btn{
+background:#f59b23;
+border:none;
+padding:14px 35px;
+border-radius:30px;
+font-weight:600;
+color:#fff;
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar{
+position:fixed;
+top:0;
+width:100%;
+z-index:1000;
+background:transparent;
+transition:.3s;
+}
+
+.navbar.scrolled{
+background:#0b1118;
+box-shadow:0 4px 12px rgba(0,0,0,.5);
+}
+
+.navbar-brand{
+color:#fff;
+font-weight:600;
+}
+
+.nav-link{
+color:#fff !important;
+margin:0 15px;
+}
+
+.nav-link:hover{
+color:#f5b14b !important;
+}
+
+.social-icons i{
+color:#fff;
+margin:0 6px;
+}
+
+.contact-btn{
+background:#fff;
+border-radius:25px;
+padding:8px 22px;
+border:none;
+}
+
+/* ===== DROPDOWN STYLE ===== */
+
+.dropdown-menu{
+border:none;
+border-radius:14px;
+padding:12px;
+min-width:260px;
+box-shadow:0 15px 40px rgba(0,0,0,.35);
+display:block;
+opacity:0;
+visibility:hidden;
+transform:translateY(15px);
+transition:.25s;
+}
+
+.dropdown:hover .dropdown-menu{
+opacity:1;
+visibility:visible;
+transform:translateY(0);
+}
+
+.dropdown-toggle::after{
+display:none;
+}
+
+.dropdown-item{
+display:flex;
+gap:12px;
+padding:12px;
+border-radius:10px;
+}
+
+.dropdown-item i{
+font-size:18px;
+color:#000;
+}
+
+.dropdown-item:hover{
+background:#f2f2f2;
+}
+
+/* ===== HAMBURGER WHITE ===== */
+
+.navbar-toggler{
+border-color:#fff;
+}
+
+.navbar-toggler-icon{
+background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255,1)' stroke-width='2' stroke-linecap='round' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:768px){
+
+.navbar{
+background:#0b1118;
+}
+
+.hero{
+height:auto;
+padding:120px 15px 80px;
+}
+
+.hero h1{
+font-size:2.2rem;
+}
+
+.navbar-nav{
+text-align:center;
+}
+
+}
+
+
+:root{
+  --dark:#15181c;
+  --orange:#f9a12c;
+  --gray:#8b8b8b;
+}
+
+body{
+  background:#eef6ff;
+  font-family:Segoe UI, sans-serif;
+}
+
+/* ---------- HERO ---------- */
+
+.hero22-title{
+  font-size:40px;
+  font-weight:700;
+}
+
+.hero22-desc{
+  color:#555;
+}
+
+.btn-orange{
+  background:var(--orange);
+  padding:12px 35px;
+  border-radius:30px;
+  color:#000;
+  font-weight:600;
+}
+
+.btn-orange:hover{
+  background:#ffb347;
+}
+
+/* ---------- DARK BLOBS ---------- */
+
+.dark-blob{
+  background:var(--dark);
+  color:#fff;
+  border-radius:60px;
+  padding:40px;
+  height:100%;
+}
+
+.dark-blob h3 span{
+  color:var(--orange);
+}
+
+.dark-blob p{
+  color:#cfcfcf;
+}
+
+/* ---------- LAW SERVICE ITEMS ---------- */
+
+.law-ss{
+  display:flex;
+  gap:15px;
+  margin-bottom:20px;
+}
+
+.law-ss i{
+  color:var(--orange);
+  margin-top:5px;
+}
+
+/* ---------- RESPONSIVE ---------- */
+
+@media(max-width:768px){
+  .hero22-title{
+    font-size:32px;
+  }
+  .blob-img{
+    border-radius:40px;
+  }
+  .dark-blob{
+    border-radius:35px;
+  }
+}
+
+
+/* DEMO SECTION */
+.section{
+height:600px;
+background:#f2f2f2;
+}
+/* ABOUT SECTION */
+
+.about-section{
+padding:100px 0;
+text-align:center;
+overflow:hidden;
+}
+
+.about-badge{
+display:inline-block;
+background:#f6b24a;
+color:#000;
+padding:6px 16px;
+border-radius:20px;
+font-size:12px;
+font-weight:600;
+margin-bottom:15px;
+}
+
+.about-title{
+font-size:2.6rem;
+font-weight:700;
+margin-bottom:20px;
+}
+
+.about-text{
+max-width:720px;
+margin:auto;
+font-size:1.05rem;
+color:#555;
+line-height:1.7;
+}
+
+/* TEXT COLOR ANIMATION */
+
+.text-animate{
+animation:textFade 1.8s ease forwards;
+}
+
+@keyframes textFade{
+0%{
+color:#999;
+}
+100%{
+color:#111;
+}
+}
+
+/* STAT CARDS */
+
+.stat-box{
+padding:25px;
+border-radius:16px;
+display:flex;
+align-items:center;
+gap:15px;
+color:#fff;
+}
+
+.stat-box.light{
+background:#f6b24a;
+color:#000;
+}
+
+.stat-box.dark{
+background:#0c0f17;
+}
+
+.stat-box.blue{
+background:linear-gradient(135deg,#0c1b2d,#1b3552);
+}
+
+.stat-icon{
+width:45px;
+height:45px;
+border-radius:50%;
+background:#fff;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:20px;
+color:#000;
+}
+
+.stat-number{
+font-size:1.4rem;
+font-weight:700;
+}
+
+.stat-label{
+font-size:12px;
+opacity:.8;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+.about-title{
+font-size:2rem;
+}
+}
+.desc-animate{
+  position:relative;
+  color:#111;
+  overflow:hidden;
+}
+
+/* Light text layer */
+.desc-animate::before{
+  content: attr(data-text);
+  position:absolute;
+  inset:0;
+  color:#999;
+}
+
+/* Reveal mask */
+.desc-animate::after{
+  content: attr(data-text);
+  position:absolute;
+  inset:0;
+  color:#111;
+  clip-path: inset(0 100% 0 0);
+  animation: revealText 10s ease forwards;
+}
+
+/* Hide original text */
+.desc-animate{
+  color:transparent;
+}
+
+@keyframes revealText{
+  to{
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+.justice-section{
+background:#faf8f5;
+padding:100px 0;
+text-align:center;
+overflow:hidden;
+}
+
+.justice-title{
+font-size:2.4rem;
+font-weight:600;
+}
+
+.title-line{
+width:60px;
+height:2px;
+background:#b38b59;
+margin:15px auto 25px;
+}
+
+.justice-subtitle{
+color:#777;
+max-width:550px;
+margin:auto;
+font-size:1rem;
+}
+
+/* CARD */
+
+.justice-card{
+background:#fff;
+border-radius:4px;
+overflow:hidden;
+transition:.3s;
+height:100%;
+}
+
+.justice-card:hover{
+transform:translateY(-8px);
+box-shadow:0 15px 40px rgba(0,0,0,.15);
+}
+
+.justice-card img{
+width:100%;
+height:220px;
+object-fit:cover;
+}
+
+.card-body{
+padding:25px;
+}
+
+.card-title{
+font-size:1.2rem;
+font-weight:600;
+margin-bottom:10px;
+}
+
+.card-text{
+font-size:0.95rem;
+color:#666;
+}
+
+.card-line{
+width:40px;
+height:2px;
+background:#b38b59;
+margin:18px auto 0;
+}
+
+@media(max-width:768px){
+.justice-title{
+font-size:2rem;
+}
+}
+.team-card{
+    background:#fff;
+    padding:25px;
+    text-align:center;
+    border-radius:10px;
+    transition:.4s;
+    height:100%;
+    box-shadow:0 15px 30px rgba(0,0,0,0.15);
+}
+
+.team-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 15px 30px rgba(0,0,0,0.15);
+}
+
+.team-card img{
+    width:140px;
+    height:140px;
+    object-fit:cover;
+    border-radius:50%;
+    margin-bottom:15px;
+}
+
+.social-icons a{
+    display:inline-block;
+    width:35px;
+    height:35px;
+    line-height:35px;
+    background:#000;
+    color:#fff;
+    border-radius:50%;
+    margin:0 5px;
+    transition:.3s;
+}
+
+.social-icons a:hover{
+    background:#c9a14a;
+}
+/* info section  */
+.info-section{
+  background:
+    linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),
+    url('https://images.unsplash.com/photo-1520607162513-77705c0f0d4a');
+  background-size:cover;
+  background-position:center;
+  color:#fff;
+  padding:72px 0;
+}
+
+/* Small Top Title */
+.small-title{
+  color:#c9a24d;
+  letter-spacing:2px;
+  font-size:13px;
+}
+
+/* Main Heading */
+.main-title{
+  font-size:48px;
+  font-weight:600;
+}
+
+.main-title span{
+  font-style:italic;
+}
+
+/* Description */
+.section-desc{
+  max-width:700px;
+  margin:auto;
+  color:#d6d6d6;
+}
+
+/* Feature Card */
+.feature-box{
+  text-align:center;
+  margin-top:50px;
+}
+
+.feature-box i{
+  font-size:42px;
+  color:#c9a24d;
+  margin-bottom:15px;
+}
+
+.feature-box small{
+  color:#c9a24d;
+  letter-spacing:1px;
+}
+
+.feature-box h5{
+  margin-top:10px;
+}
+
+.feature-box p{
+  color:#cccccc;
+  font-size:14px;
+}
+
+/* Responsive */
+@media(max-width:768px){
+  .main-title{
+    font-size:34px;
+  }
+}
+/* faq */
+.dark-faq{
+background:#15181c;   /* smooth dark */
+color:#ffffff;
+padding:110px 0;
+}
+
+/* Badge */
+.faq-badge{
+display:inline-block;
+background:#c9a14a;   /* gold */
+color:#000;
+padding:6px 16px;
+border-radius:20px;
+font-size:12px;
+margin-bottom:15px;
+font-weight:600;
+}
+
+/* Heading */
+.faq-heading{
+font-size:2.8rem;
+font-weight:700;
+color:#ffffff;
+}
+
+.faq-subtext{
+color:#b5b5b5;
+max-width:520px;
+margin-top:10px;
+}
+
+/* ACCORDION */
+
+.dark-accordion .accordion-item{
+background:transparent;
+border:none;
+border-bottom:1px solid rgba(255,255,255,.12);
+}
+
+.dark-accordion .accordion-button{
+background:transparent;
+color:#f1f1f1;
+padding:22px 0;
+box-shadow:none;
+display:flex;
+align-items:center;
+gap:15px;
+font-weight:500;
+}
+
+.dark-accordion .accordion-button:not(.collapsed){
+color:#c9a14a;   /* gold when active */
+}
+
+.dark-accordion .accordion-button::after{
+display:none;
+}
+
+/* Number Circle */
+.q-number{
+width:28px;
+height:28px;
+border-radius:50%;
+background:#c9a14a;
+color:#000;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:13px;
+font-weight:600;
+flex-shrink:0;
+}
+
+/* Arrow */
+.faq-icon{
+margin-left:auto;
+transition:.3s;
+color:#c9a14a;
+}
+
+.accordion-button:not(.collapsed) .faq-icon{
+transform:rotate(180deg);
+}
+
+/* Body */
+.dark-accordion .accordion-body{
+color:#cccccc;
+padding-left:45px;
+padding-bottom:20px;
+}
+
+/* Smooth */
+.accordion-collapse{
+transition:height .25s ease !important;
+}
+
+/* Mobile */
+@media(max-width:768px){
+.faq-heading{
+font-size:2rem;
+}
+}
+
+
+/* what we do  */
+:root{
+  --gold:#c9a14a;
+  --dark:#111111;
+  --light:#f7f7f7;
+}
+
+.what-section{
+  background:#fff;
+  padding:80px 0;
+}
+
+/* Heading */
+.section-tag{
+  color:var(--gold);
+  letter-spacing:2px;
+  font-size:13px;
+}
+
+.section-title{
+  font-size:42px;
+  font-weight:600;
+}
+
+.section-title span{
+  font-style:italic;
+}
+
+.section-desc{
+  max-width:650px;
+  color:#666;
+}
+
+/* Card */
+.service-card{
+  background:#f7f7f7;
+  border-radius:14px;
+  padding:30px 22px;
+  text-align:left;
+  height:100%;
+  transition:.4s;
+  border:1px solid #eee;
+
+  /* NEW SHADOW */
+  box-shadow:0 4px 12px rgba(0,0,0,0.08);
+}
+
+.service-card:hover{
+  background:#383838;
+  color:#fff;
+  transform:translateY(-10px);
+
+  /* STRONGER SHADOW ON HOVER */
+  box-shadow:0 12px 25px rgba(0,0,0,0.25);
+}
+
+
+.service-card:hover p{
+  color:#ddd;
+}
+
+/* Icon */
+.service-icon{
+  width:55px;
+  height:55px;
+  background:#fff;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:22px;
+  color:var(--gold);
+  margin-bottom:15px;
+}
+
+.service-card:hover .service-icon{
+  background:var(--gold);
+  color:#000;
+}
+
+/* Label */
+.service-label{
+  color:var(--gold);
+  font-size:12px;
+  letter-spacing:1px;
+}
+
+.service-card p{
+  font-size:14px;
+  color:#555;
+}
+
+/* Mobile */
+@media(max-width:768px){
+  .section-title{
+    font-size:32px;
+  }
+}
+.our-tt{
+  background:#f7f7f7;
+}
+
+:root{
+ --gold:#c9a14a;
+ --dark:#0c0f14;
+}
+/* CTA BAR */
+
+.cta-bar{
+  background:#d39a5b;   /* golden brown */
+  padding:30px 0;
+}
+
+.cta-text{
+  color:#fff;
+  font-size:24px;
+  font-weight:500;
+  margin:0;
+}
+
+/* Button */
+
+.cta-btn{
+  border:2px solid #fff;
+  color:#fff;
+  padding:12px 28px;
+  text-decoration:none;
+  font-weight:600;
+  display:inline-block;
+  transition:0.3s;
+}
+
+.cta-btn:hover{
+  background:#fff;
+  color:#000;
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+  .cta-text{
+    font-size:20px;
+  }
+}
+
+
+.footer{
+ background:var(--dark);
+ color:#ccc;
+ padding:80px 0 20px;
+}
+
+.footer h5{
+ color:#fff;
+ margin-bottom:25px;
+ position:relative;
+}
+
+.footer h5::after{
+ content:'';
+ width:40px;
+ height:2px;
+ background:var(--gold);
+ position:absolute;
+ left:0;
+ bottom:-10px;
+}
+
+.footer p{
+ color:#aaa;
+}
+
+/* Links */
+.footer ul{
+ list-style:none;
+ padding:0;
+}
+
+.footer ul li{
+ margin-bottom:10px;
+}
+
+.footer ul li a{
+ color:#ccc;
+ text-decoration:none;
+ transition:.3s;
+}
+
+.footer ul li a:hover{
+ color:var(--gold);
+ padding-left:5px;
+}
+
+/* Social */
+.social a{
+ width:38px;
+ height:38px;
+ border:1px solid var(--gold);
+ display:inline-flex;
+ align-items:center;
+ justify-content:center;
+ color:var(--gold);
+ margin-right:8px;
+ transition:.3s;
+}
+
+.social a:hover{
+ background:var(--gold);
+ color:#000;
+}
+/* slide   */
+
+/* ===== COLORS ===== */
+:root{
+--dark:#15181c;
+--gold:#c9a14a;
+--light:#f5f7fb;
+}
+
+/* ===== PAGE ===== */
+body{
+background:var(--light);
+}
+
+/* ===== WRAPPER ===== */
+.slider-wrapper{
+position:relative;
+overflow:hidden;
+padding:60px 0;
+}
+
+/* ===== TRACK ===== */
+.slider-track{
+display:flex;
+justify-content:center;
+align-items:center;
+gap:30px;
+}
+
+/* ===== CARD ===== */
+.slider-card{
+width:320px;
+background:white;
+border-radius:16px;
+overflow:hidden;
+box-shadow:0 12px 30px rgba(0,0,0,0.18);
+display:none;
+transition:
+opacity 0.6s ease,
+transform 0.6s ease,
+filter 0.6s ease;
+}
+
+/* show only 3 */
+.slider-card.active,
+.slider-card.left,
+.slider-card.right{
+display:block;
+}
+
+/* image */
+.slider-card img{
+width:100%;
+height:220px;
+object-fit:cover;
+}
+
+/* content */
+.card-body{
+text-align:center;
+padding:22px;
+}
+
+/* ===== CENTER ===== */
+.slider-card.active{
+background:var(--dark);
+color:white;
+transform:scale(1.1);
+opacity:1;
+filter:none;
+z-index:5;
+}
+
+/* center title */
+.slider-card.active h5{
+color:var(--gold);
+}
+
+/* ===== SIDES ===== */
+.slider-card.left,
+.slider-card.right{
+transform:scale(0.9);
+opacity:0.35;
+filter:blur(1.5px);
+z-index:1;
+}
+
+/* ===== ARROWS ===== */
+.arrow-btn{
+position:absolute;
+top:50%;
+transform:translateY(-50%);
+width:46px;
+height:46px;
+border-radius:50%;
+border:none;
+background:white;
+box-shadow:0 0 12px rgba(0,0,0,.2);
+font-size:22px;
+cursor:pointer;
+color:var(--dark);
+}
+
+.prev-btn{left:15px;}
+.next-btn{right:15px;}
+
+.arrow-btn:hover{
+background:var(--gold);
+color:black;
+}
+
+/* ===== DOTS ===== */
+.dots{
+text-align:center;
+margin-top:25px;
+}
+
+.dots span{
+width:10px;
+height:10px;
+background:#bbb;
+display:inline-block;
+border-radius:50%;
+margin:0 4px;
+}
+
+.dots .active-dot{
+background:var(--gold);
+}
+/* Contact */
+.contact-item{
+ display:flex;
+ gap:10px;
+ margin-bottom:12px;
+}
+
+.contact-item i{
+ color:var(--gold);
+}
+
+/* Gallery */
+.gallery{
+ display:grid;
+ grid-template-columns:repeat(3,1fr);
+ gap:8px;
+}
+
+.gallery img{
+ width:100%;
+ height:70px;
+ object-fit:cover;
+}
+
+/* Map */
+.footer-map iframe{
+ width:100%;
+ height:200px;
+ border:0;
+ border-radius:6px;
+}
+
+/* Bottom */
+.footer-bottom{
+ border-top:1px solid rgba(255,255,255,0.1);
+ margin-top:40px;
+ padding-top:15px;
+ text-align:center;
+ color:#999;
+}
+
+/* Responsive */
+@media(max-width:768px){
+ .footer{
+   text-align:center;
+ }
+ .footer h5::after{
+   left:50%;
+   transform:translateX(-50%);
+ }
+}
+.contact-section{
+background:#ffffff;
+padding:100px 0;
+}
+
+/* LEFT BOX */
+
+.contact-info-box{
+background:#15181c;
+color:#fff;
+padding:40px;
+border-radius:20px;
+height:100%;
+}
+
+.contact-info-box h4{
+margin-bottom:20px;
+}
+
+.contact-info-box ul{
+list-style:none;
+padding:0;
+margin-bottom:25px;
+}
+
+.contact-info-box li{
+margin-bottom:12px;
+color:#ddd;
+}
+
+.contact-info-box i{
+color:#c9a14a;
+margin-right:8px;
+}
+
+.contact-mini{
+margin-bottom:12px;
+color:#ddd;
+}
+
+/* FORM CARD */
+
+.contact-form-card{
+background:#f7f7f7;
+padding:40px;
+border-radius:20px;
+box-shadow:0 15px 35px rgba(0,0,0,0.1);
+height:100%;
+}
+
+/* Inputs */
+
+.form-control,
+.form-select{
+border-radius:12px;
+border:1px solid #ddd;
+}
+
+.form-control:focus,
+.form-select:focus{
+border-color:#c9a14a;
+box-shadow:0 0 0 .2rem rgba(201,161,74,.25);
+}
+
+/* Button */
+
+.contact-btn-main{
+width:100%;
+border:none;
+background:#c9a14a;
+color:#000;
+padding:14px;
+border-radius:30px;
+font-weight:600;
+transition:.3s;
+}
+
+.contact-btn-main:hover{
+background:#ddb868;
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+.contact-info-box,
+.contact-form-card{
+padding:25px;
+}
+
+}
+
+
+</style>
+
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<nav class="navbar navbar-expand-lg">
+<div class="container">
+
+<a class="navbar-brand" href="#">Chakraborty Law Firm</a>
+
+<button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+<span class="navbar-toggler-icon"></span>
+</button>
+
+<div class="collapse navbar-collapse" id="menu">
+
+<ul class="navbar-nav mx-auto">
+
+<li class="nav-item">
+<a class="nav-link" href="#">Home</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="#">Practices</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="#">Resources</a>
+</li>
+
+<li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle" href="#">Company</a>
+
+<ul class="dropdown-menu">
+
+<li>
+<a class="dropdown-item" href="#">
+<i class="bi bi-buildings"></i>
+<div>
+<b>About Us</b><br>
+<small>Who we are</small>
+</div>
+</a>
+</li>
+
+<li>
+<a class="dropdown-item" href="#">
+<i class="bi bi-chat-left-text"></i>
+<div>
+<b>Client Voices</b><br>
+<small>Testimonials</small>
+</div>
+</a>
+</li>
+
+<li>
+<a class="dropdown-item" href="#">
+<i class="bi bi-briefcase"></i>
+<div>
+<b>Careers</b><br>
+<small>Join our team</small>
+</div>
+</a>
+</li>
+
+</ul>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="#">Blog</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="#">Contact</a>
+</li>
+
+</ul>
+
+<div class="d-flex align-items-center gap-3">
+
+<div class="social-icons">
+<i class="bi bi-facebook"></i>
+<i class="bi bi-instagram"></i>
+<i class="bi bi-linkedin"></i>
+<i class="bi bi-twitter-x"></i>
+</div>
+
+<button class="contact-btn">Contact Us</button>
+
+</div>
+
+</div>
+</div>
+</nav>
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h1 data-aos="fade-up">
+Your Advocate When It<br>Matters Most
+</h1>
+
+<p data-aos="fade-up" data-aos-delay="200">
+Navigating legal challenges shouldn't feel overwhelming. Get clear guidance and dedicated representation from an attorney who truly listens.
+</p>
+
+<a href="#" class="btn mt-3" data-aos="zoom-in" data-aos-delay="400">
+Schedule Consultation
+</a>
+
+</div>
+
+</section>
+<section class="py-5">
+<div class="container">
+
+<div class="row align-items-center g-5">
+
+<!-- LEFT TEXT -->
+<div class="col-lg-6" data-aos="fade-right">
+<h1 class="hero22-title">Legal Help That Puts<br>You First</h1>
+
+<p class="hero22-desc mt-3">
+Facing a legal issue can be stressful, confusing, and emotionally draining.
+You need someone in your corner who understands the law, fights for your rights,
+and explains everything clearly.
+</p>
+
+<p class="hero22-desc">
+We’re here to make the process simple, supportive, and effective.
+Whether you’re dealing with immigration issues, divorce proceedings,
+or any other legal matter, you deserve representation that’s both powerful and personal.
+</p>
+
+<a href="#" class="btn btn-orange mt-3">Contact us</a>
+</div>
+
+<!-- RIGHT CONTENT -->
+<div class="col-lg-6" data-aos="zoom-in">
+
+<div class="dark-blob">
+
+<div class="law-ss">
+<i class="fa-solid fa-circle"></i>
+<div>
+<h6 class="text-warning">Family Law</h6>
+<p>
+Divorce, child custody, spousal support,
+and other family matters handled with care and professionalism.
+</p>
+</div>
+</div>
+
+<div class="law-ss">
+<i class="fa-solid fa-circle"></i>
+<div>
+<h6 class="text-warning">Personal Injury</h6>
+<p>
+If you've been injured due to someone else's negligence,
+we fight for the compensation you deserve.
+</p>
+</div>
+</div>
+
+<div class="law-ss">
+<i class="fa-solid fa-circle"></i>
+<div>
+<h6 class="text-warning">Estate Planning</h6>
+<p>
+Protect your legacy and provide for your loved ones
+with wills, trusts, and estate plans.
+</p>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+</section>
+
+  <!-- about section -->
+<section class="about-section bg-light">
+
+<div class="container">
+
+<!-- Badge -->
+<div class="about-badge" data-aos="fade-down">
+ABOUT US
+</div>
+
+<!-- Title -->
+<h2 class="about-title text-animate" data-aos="fade-up">
+Who are we
+</h2>
+
+<!-- Text -->
+ 
+<p class="about-text desc-animate"
+data-text="Our legal team is committed to providing expert, client-focused legal services across a range of practice areas. With deep experience and a results-driven approach, we deliver strategic solutions tailored to each client's needs." data-aos="fade-up" data-aos-delay="200">
+Our legal team is committed to providing expert, client-focused legal services across a range of practice areas. With deep experience and a results-driven approach, we deliver strategic solutions tailored to each client's needs.
+</p>
+
+
+<!-- Stats -->
+<div class="row justify-content-center mt-5 g-4">
+
+<!-- Clients -->
+<div class="col-md-4" data-aos="zoom-in">
+<div class="stat-box light">
+
+<div class="stat-icon">
+<i class="bi bi-people"></i>
+</div>
+
+<div>
+<div class="stat-label">NUMBER OF CLIENTS</div>
+<div class="stat-number">235</div>
+</div>
+
+</div>
+</div>
+
+<!-- Experience -->
+<div class="col-md-4" data-aos="zoom-in" data-aos-delay="150">
+<div class="stat-box dark">
+
+<div class="stat-icon">
+<i class="bi bi-star-fill"></i>
+</div>
+
+<div>
+<div class="stat-label">YEARS OF EXPERIENCE</div>
+<div class="stat-number">12+</div>
+</div>
+
+</div>
+</div>
+
+<!-- Team -->
+<div class="col-md-4" data-aos="zoom-in" data-aos-delay="300">
+<div class="stat-box blue">
+
+<div class="stat-icon">
+<i class="bi bi-person-badge"></i>
+</div>
+
+<div>
+<div class="stat-label">TEAM MEMBERS</div>
+<div class="stat-number">19</div>
+</div>
+
+</div>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- info section  -->
+ 
+<section class="info-section">
+
+<div class="container text-center">
+
+<!-- Heading -->
+<div data-aos="fade-down">
+<p class="small-title">OUR SERVICES</p>
+
+<h1 class="main-title">
+Defining <span>success</span> together
+</h1>
+
+<p class="section-desc mt-3">
+In order to ensure the quality of service in the field of corruption
+practices, we have assembled an experienced team.
+</p>
+</div>
+
+<!-- FEATURES -->
+<div class="row mt-5">
+
+<div class="col-md-3 col-sm-6" data-aos="fade-up">
+<div class="feature-box">
+<i class="fa-solid fa-scale-balanced"></i>
+<small>RECOGNITION</small>
+<h5>Commercial</h5>
+<p>Having top calibre legal support has become a necessity.</p>
+</div>
+</div>
+
+<div class="col-md-3 col-sm-6" data-aos="fade-up" data-aos-delay="150">
+<div class="feature-box">
+<i class="fa-solid fa-globe"></i>
+<small>BUSINESS LAW</small>
+<h5>Trade and Markets</h5>
+<p>Commercial implications and great client service are important.</p>
+</div>
+</div>
+
+<div class="col-md-3 col-sm-6" data-aos="fade-up" data-aos-delay="300">
+<div class="feature-box">
+<i class="fa-solid fa-handshake"></i>
+<small>TRUST US</small>
+<h5>Dispute Support</h5>
+<p>We advise many of the leading companies in legal services.</p>
+</div>
+</div>
+
+<div class="col-md-3 col-sm-6" data-aos="fade-up" data-aos-delay="450">
+<div class="feature-box">
+<i class="fa-solid fa-copyright"></i>
+<small>HONORS</small>
+<h5>Copyright</h5>
+<p>Including infringement warnings and civil law proceedings.</p>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- justice section  -->
+
+<section class="justice-section">
+
+<div class="container">
+
+<!-- Heading -->
+<h2 class="justice-title" data-aos="fade-up">
+Step closer to justice
+</h2>
+
+<div class="title-line" data-aos="fade-up"></div>
+
+<p class="justice-subtitle" data-aos="fade-up" data-aos-delay="200">
+Best law practices. Expertise in various law fields. Great results.
+</p>
+
+<!-- Cards -->
+<div class="row mt-5 g-4">
+
+<!-- Card 1 -->
+<div class="col-md-4" data-aos="fade-up">
+<div class="justice-card">
+
+<img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f" alt="">
+
+<div class="card-body">
+<h5 class="card-title">Best law practices</h5>
+<p class="card-text">
+Lorem ipsum dolor sit amet, consectetur adipiscing sed do eiusmod tempor incididunt
+</p>
+<div class="card-line"></div>
+</div>
+
+</div>
+</div>
+
+<!-- Card 2 -->
+<div class="col-md-4" data-aos="fade-up" data-aos-delay="150">
+<div class="justice-card">
+
+<img src="https://images.unsplash.com/photo-1528740561666-dc2479dc08ab" alt="">
+
+<div class="card-body">
+<h5 class="card-title">Efficiency & Trust</h5>
+<p class="card-text">
+Lorem ipsum dolor sit amet, consectetur adipiscing sed do eiusmod tempor incididunt
+</p>
+<div class="card-line"></div>
+</div>
+
+</div>
+</div>
+
+<!-- Card 3 -->
+<div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+<div class="justice-card">
+
+<img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f" alt="">
+
+<div class="card-body">
+<h5 class="card-title">Results you deserve</h5>
+<p class="card-text">
+Lorem ipsum dolor sit amet, consectetur adipiscing sed do eiusmod tempor incididunt
+</p>
+<div class="card-line"></div>
+</div>
+
+</div>
+</div>
+
+</div>
+
+</div>
+
+</section>
+<!-- our team  -->
+
+
+<section class="py-5 our-tt">
+<div class="container">
+
+<!-- Heading -->
+<div class="text-center mb-5" data-aos="fade-down">
+    <small class="text-uppercase">Who We Are</small>
+    <h2 class="fw-bold">Our Team</h2>
+    <p>Renowned for the quality of work of the lawyers, our team provide best legal advice.</p>
+</div>
+
+<div class="row g-4">
+
+<!-- Member 1 -->
+<div class="col-lg-3 col-md-6" data-aos="fade-up">
+<div class="team-card">
+<img src="https://i.pravatar.cc/300?img=32">
+<h6 class="text-uppercase text-muted">Head of Learning</h6>
+<h5>Anna Torpey</h5>
+<p>With extensive experience, Anna advises top national and international companies.</p>
+<div class="social-icons">
+<a href="#"><i class="fab fa-facebook-f"></i></a>
+<a href="#"><i class="fab fa-twitter"></i></a>
+<a href="#"><i class="fab fa-instagram"></i></a>
+</div>
+</div>
+</div>
+
+<!-- Member 2 -->
+<div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="150">
+<div class="team-card">
+<img src="https://i.pravatar.cc/300?img=12">
+<h6 class="text-uppercase text-muted">Senior Associate</h6>
+<h5>Michael Holway</h5>
+<p>Founding Partner and heads the Corporate & Commercial Practice Group.</p>
+<div class="social-icons">
+<a href="#"><i class="fab fa-facebook-f"></i></a>
+<a href="#"><i class="fab fa-twitter"></i></a>
+<a href="#"><i class="fab fa-instagram"></i></a>
+</div>
+</div>
+</div>
+
+<!-- Member 3 -->
+<div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+<div class="team-card">
+<img src="https://i.pravatar.cc/300?img=59">
+<h6 class="text-uppercase text-muted">Partner</h6>
+<h5>Jonathan Kane</h5>
+<p>Advises clients in high-profile energy projects.</p>
+<div class="social-icons">
+<a href="#"><i class="fab fa-facebook-f"></i></a>
+<a href="#"><i class="fab fa-twitter"></i></a>
+<a href="#"><i class="fab fa-instagram"></i></a>
+</div>
+</div>
+</div>
+
+<!-- Member 4 -->
+<div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="450">
+<div class="team-card">
+<img src="https://i.pravatar.cc/300?img=45">
+<h6 class="text-uppercase text-muted">Associate</h6>
+<h5>Mark Johnson</h5>
+<p>Independent attorney at law and dispute resolution expert.</p>
+<div class="social-icons">
+<a href="#"><i class="fab fa-facebook-f"></i></a>
+<a href="#"><i class="fab fa-twitter"></i></a>
+<a href="#"><i class="fab fa-instagram"></i></a>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- faq  -->
+<section class="dark-faq">
+<div class="container">
+
+<!-- Heading -->
+<div class="text-center mb-5">
+<span class="faq-badge" data-aos="fade-down">ANSWERS FOR YOUR QUESTIONS</span>
+<h2 class="faq-heading mt-3" data-aos="fade-up">
+Frequently asked questions
+</h2>
+<p class="faq-subtext mx-auto" data-aos="fade-up" data-aos-delay="150">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+</p>
+</div>
+
+<!-- FAQ -->
+<div class="accordion dark-accordion col-lg-8 mx-auto" id="darkFaq">
+
+<!-- Q1 -->
+<div class="accordion-item" data-aos="fade-up">
+<h2 class="accordion-header">
+<button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#dq1">
+<span class="q-number">1</span>
+Are there different types of insurance policies?
+<i class="bi bi-chevron-down faq-icon"></i>
+</button>
+</h2>
+<div id="dq1" class="accordion-collapse collapse show" data-bs-parent="#darkFaq">
+<div class="accordion-body">
+Yes, there are several types including life, health, auto, home, and business insurance.
+</div>
+</div>
+</div>
+
+<!-- Q2 -->
+<div class="accordion-item" data-aos="fade-up" data-aos-delay="100">
+<h2 class="accordion-header">
+<button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#dq2">
+<span class="q-number">2</span>
+What is the difference between an owner's policy and a lender's policy?
+<i class="bi bi-chevron-down faq-icon"></i>
+</button>
+</h2>
+<div id="dq2" class="accordion-collapse collapse" data-bs-parent="#darkFaq">
+<div class="accordion-body">
+Owner’s policy protects the buyer, lender’s policy protects the bank.
+</div>
+</div>
+</div>
+
+<!-- Q3 -->
+<div class="accordion-item" data-aos="fade-up" data-aos-delay="200">
+<h2 class="accordion-header">
+<button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#dq3">
+<span class="q-number">3</span>
+What are pre-closing procedures?
+<i class="bi bi-chevron-down faq-icon"></i>
+</button>
+</h2>
+<div id="dq3" class="accordion-collapse collapse" data-bs-parent="#darkFaq">
+<div class="accordion-body">
+Steps taken before closing such as title search and document verification.
+</div>
+</div>
+</div>
+
+<!-- Q4 -->
+<div class="accordion-item" data-aos="fade-up" data-aos-delay="300">
+<h2 class="accordion-header">
+<button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#dq4">
+<span class="q-number">4</span>
+What is the difference between title insurance and homeowner insurance?
+<i class="bi bi-chevron-down faq-icon"></i>
+</button>
+</h2>
+<div id="dq4" class="accordion-collapse collapse" data-bs-parent="#darkFaq">
+<div class="accordion-body">
+Title insurance protects ownership rights, homeowner insurance covers property damage.
+</div>
+</div>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<!-- what we do  -->
+ 
+<section class="what-section">
+<div class="container">
+
+<!-- Heading -->
+<div class="mb-5" data-aos="fade-up">
+<p class="section-tag fs-3">WHAT WE DO</p>
+<h2 class="section-title">Defining <span>success</span> together</h2>
+<p class="section-desc">
+In order to ensure the highest quality of service in the field of corruption
+practices, we have assembled a team.
+</p>
+</div>
+
+<!-- Cards -->
+<div class="row g-4">
+
+<!-- 1 -->
+<div class="col-lg-3 col-md-6" data-aos="fade-up">
+<div class="service-card">
+<div class="service-icon"><i class="fa-solid fa-scale-balanced"></i></div>
+<div class="service-label">RECOGNITION</div>
+<h6>Commercial</h6>
+<p>Having top calibre legal support has become a necessity.</p>
+</div>
+</div>
+
+<!-- 2 -->
+<div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+<div class="service-card">
+<div class="service-icon"><i class="fa-solid fa-building"></i></div>
+<div class="service-label">BUSINESS LAW</div>
+<h6>Trade and Markets</h6>
+<p>Commercial implications and great client service are important.</p>
+</div>
+</div>
+
+<!-- 3 -->
+<div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+<div class="service-card">
+<div class="service-icon"><i class="fa-solid fa-tag"></i></div>
+<div class="service-label">TRUST US</div>
+<h6>Dispute Support</h6>
+<p>We advise many leading companies in legal services.</p>
+</div>
+</div>
+
+<!-- 4 -->
+<div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+<div class="service-card">
+<div class="service-icon"><i class="fa-solid fa-copyright"></i></div>
+<div class="service-label">HONORS</div>
+<h6>Copyright</h6>
+<p>Including infringement warnings and civil proceedings.</p>
+</div>
+</div>
+
+<!-- 5 -->
+<div class="col-lg-3 col-md-6" data-aos="fade-up">
+<div class="service-card">
+<div class="service-icon"><i class="fa-solid fa-landmark"></i></div>
+<div class="service-label">SOLUTIONS</div>
+<h6>Banking</h6>
+<p>We have worked on the first loan facilities.</p>
+</div>
+</div>
+
+<!-- 6 -->
+<div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+<div class="service-card">
+<div class="service-icon"><i class="fa-solid fa-shield-halved"></i></div>
+<div class="service-label">EDUCATION</div>
+<h6>Corruption</h6>
+<p>Our experts help prevent such occurrence.</p>
+</div>
+</div>
+
+<!-- 7 -->
+<div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+<div class="service-card">
+<div class="service-icon"><i class="fa-solid fa-briefcase"></i></div>
+<div class="service-label">RESOLUTION</div>
+<h6>Employment</h6>
+<p>Assistance in drafting and negotiating.</p>
+</div>
+</div>
+
+<!-- 8 -->
+<div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+<div class="service-card">
+<div class="service-icon"><i class="fa-solid fa-award"></i></div>
+<div class="service-label">AWARDS</div>
+<h6>Anti-bribery</h6>
+<p>Helping companies avoid bribery risks.</p>
+</div>
+</div>
+
+</div>
+
+</div>
+</section>
+<!-- slider  -->
+ 
+<div class="container pt-3">
+
+<h2 class="text-center fw-bold">
+Why Choose <span style="color:#c9a14a">Our Law Firm</span>
+</h2>
+
+<p class="text-center text-muted">
+Trusted legal representation with proven results.
+</p>
+
+<!-- ===== SLIDER ===== -->
+<div class="slider-wrapper">
+
+<button class="arrow-btn prev-btn" onclick="prevSlide()">&#10094;</button>
+<button class="arrow-btn next-btn" onclick="nextSlide()">&#10095;</button>
+
+<div class="slider-track">
+
+<!-- CARD 1 -->
+<div class="slider-card">
+<img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f">
+<div class="card-body">
+<h5>Family Law</h5>
+<p>Divorce, custody, and family matters handled with care and professionalism.</p>
+</div>
+</div>
+
+<!-- CARD 2 -->
+<div class="slider-card">
+<img src="https://images.unsplash.com/photo-1528740561666-dc2479dc08ab">
+<div class="card-body">
+<h5>Personal Injury</h5>
+<p>Fighting for the compensation you deserve after accidents and injuries.</p>
+</div>
+</div>
+
+<!-- CARD 3 -->
+<div class="slider-card">
+<img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f">
+<div class="card-body">
+<h5>Criminal Defense</h5>
+<p>Strong defense strategies to protect your rights and freedom.</p>
+</div>
+</div>
+
+<!-- CARD 4 -->
+<div class="slider-card">
+<img src="https://images.unsplash.com/photo-1528740561666-dc2479dc08ab">
+<div class="card-body">
+<h5>Business Law</h5>
+<p>Legal support for contracts, disputes, and corporate compliance.</p>
+</div>
+</div>
+
+</div>
+
+<div class="dots" id="dots"></div>
+
+</div>
+</div>
+
+<!-- contact  us section-->
+
+<section class="contact-section">
+<div class="container">
+
+<!-- Heading -->
+<div class="text-center mb-5">
+<p class="section-tag fs-3" data-aos="fade-down ">CONTACT US</p>
+<h2 class="section-title" data-aos="fade-up">Request a Free Consultation</h2>
+<p class="section-desc mx-auto" data-aos="fade-up" data-aos-delay="150">
+Tell us about your case and our attorneys will contact you shortly.
+</p>
+</div>
+
+<div class="row g-4 align-items-stretch">
+
+<!-- LEFT INFO -->
+<div class="col-lg-5" data-aos="fade-right">
+
+<div class="contact-info-box">
+
+<h4>Why Choose Our Firm?</h4>
+
+<ul>
+<li><i class="fa-solid fa-check"></i> Experienced legal professionals</li>
+<li><i class="fa-solid fa-check"></i> Confidential case evaluation</li>
+<li><i class="fa-solid fa-check"></i> Fast response time</li>
+<li><i class="fa-solid fa-check"></i> Client-focused approach</li>
+</ul>
+
+<div class="contact-mini">
+<i class="fa-solid fa-phone"></i> (123) 00 8888 999
+</div>
+
+<div class="contact-mini">
+<i class="fa-solid fa-envelope"></i> info@miakolawfirm.com
+</div>
+
+<div class="contact-mini">
+<i class="fa-solid fa-location-dot"></i> 150 Torrent Court Street, UK
+</div>
+
+</div>
+
+</div>
+
+<!-- RIGHT FORM -->
+<div class="col-lg-7" data-aos="fade-left">
+
+<div class="contact-form-card">
+
+<form>
+
+<div class="row g-3">
+
+<div class="col-md-6">
+<div class="form-floating">
+<input type="text" class="form-control" placeholder="Name">
+<label>Full Name</label>
+</div>
+</div>
+
+<div class="col-md-6">
+<div class="form-floating">
+<input type="email" class="form-control" placeholder="Email">
+<label>Email Address</label>
+</div>
+</div>
+
+<div class="col-md-6">
+<div class="form-floating">
+<input type="tel" class="form-control" placeholder="Phone">
+<label>Phone Number</label>
+</div>
+</div>
+
+<div class="col-md-6">
+<div class="form-floating">
+<select class="form-select">
+<option selected>Select Practice Area</option>
+<option>Family Law</option>
+<option>Personal Injury</option>
+<option>Business Law</option>
+<option>Criminal Law</option>
+<option>Estate Planning</option>
+</select>
+<label>Practice Area</label>
+</div>
+</div>
+
+<div class="col-12">
+<div class="form-floating">
+<textarea class="form-control" style="height:120px" placeholder="Message"></textarea>
+<label>Brief Description of Your Case</label>
+</div>
+</div>
+
+<div class="col-12">
+<button type="submit" class="contact-btn-main">
+Send Message
+</button>
+</div>
+
+</div>
+
+</form>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+</section>
+<!-- footrer  -->
+ <!-- CTA BAR -->
+<section class="cta-bar">
+  <div class="container">
+    <div class="row align-items-center text-center text-md-start">
+
+      <!-- TEXT -->
+      <div class="col-md-8">
+        <h4 class="cta-text">
+          If you have any legal problem in your life ... We are available
+        </h4>
+      </div>
+
+      <!-- BUTTON -->
+      <div class="col-md-4 text-md-end mt-3 mt-md-0">
+        <a href="#" class="cta-btn">GET FREE CONSULTATION</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+<footer class="footer">
+
+<div class="container">
+<div class="row g-4">
+
+<!-- ABOUT -->
+<div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+<h5>ABOUT US</h5>
+<p>
+There are variations of passages of Lorem Ipsum available,
+but the majority have suffered alteration.
+</p>
+
+<div class="social mt-3">
+<a href="#" class="text-decoration-none"><i class="fab fa-facebook-f"></i></a>
+<a href="#" class="text-decoration-none"><i class="fab fa-twitter"></i></a>
+<a href="#" class="text-decoration-none"><i class="fab fa-linkedin-in"></i></a>
+<a href="#" class="text-decoration-none"><i class="fab fa-skype"></i></a>
+</div>
+</div>
+
+<!-- LINKS -->
+<div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+<h5>EXPLORE OUR WORK</h5>
+<ul>
+<li><a href="#">Criminal Law</a></li>
+<li><a href="#">Accident Law</a></li>
+<li><a href="#">Divorce Law</a></li>
+<li><a href="#">Industrial Law</a></li>
+<li><a href="#">Business Law</a></li>
+<li><a href="#">Family Law</a></li>
+</ul>
+</div>
+
+<!-- CONTACT -->
+<div class="col-lg-3 col-md-6" data-aos="fade-up" >
+<h5>KEEP IN TOUCH</h5>
+
+<div class="contact-item">
+<i class="fa-solid fa-clock"></i>
+<span>Sun - Mon</span>
+</div>
+
+<div class="contact-item">
+<i class="fa-solid fa-location-dot"></i>
+<span>150 Torrent Court Street, UK</span>
+</div>
+
+<div class="contact-item">
+<i class="fa-solid fa-phone"></i>
+<span>(123) 00 8888 999</span>
+</div>
+
+<div class="contact-item">
+<i class="fa-solid fa-envelope"></i>
+<span>info@miakolawfirm.com</span>
+</div>
+
+<div class="footer-map mt-3">
+<iframe 
+src="https://www.google.com/maps?q=London&output=embed">
+</iframe>
+</div>
+
+</div>
+
+<!-- GALLERY -->
+<div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+<h5>FLICKR GALLERY</h5>
+
+<div class="gallery">
+<img src="https://images.pexels.com/photos/5668484/pexels-photo-5668484.jpeg">
+<img src="https://images.pexels.com/photos/97077/pexels-photo-97077.jpeg">
+<img src="https://images.pexels.com/photos/207616/pexels-photo-207616.jpeg">
+<img src="https://images.pexels.com/photos/534217/pexels-photo-534217.jpeg">
+<img src="https://images.pexels.com/photos/6072088/pexels-photo-6072088.jpeg">
+<img src="https://images.pexels.com/photos/5668484/pexels-photo-5668484.jpeg">
+</div>
+
+</div>
+
+</div>
+
+<div class="footer-bottom">
+Miakolegal © All Rights Reserved
+</div>
+
+</div>
+
+</footer>
+<!-- ================= JS ================= -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script>
+AOS.init();
+
+window.addEventListener("scroll",function(){
+document.querySelector(".navbar")
+.classList.toggle("scrolled",window.scrollY>80);
+});
+</script>
+<script>
+
+const cards = document.querySelectorAll(".slider-card");
+const dotsBox = document.getElementById("dots");
+
+let index = 0;
+const total = cards.length;
+let auto;
+
+/* dots */
+cards.forEach((_,i)=>{
+let d=document.createElement("span");
+if(i===0) d.classList.add("active-dot");
+dotsBox.appendChild(d);
+});
+
+/* update */
+function updateSlider(){
+
+cards.forEach(c=>{
+c.classList.remove("active","left","right");
+});
+
+let left = (index-1+total)%total;
+let right = (index+1)%total;
+
+cards[left].classList.add("left");
+cards[index].classList.add("active");
+cards[right].classList.add("right");
+
+dotsBox.querySelectorAll("span")
+.forEach(d=>d.classList.remove("active-dot"));
+dotsBox.children[index].classList.add("active-dot");
+}
+
+/* next prev */
+function nextSlide(){
+index=(index+1)%total;
+requestAnimationFrame(updateSlider);
+resetAuto();
+}
+
+function prevSlide(){
+index=(index-1+total)%total;
+requestAnimationFrame(updateSlider);
+resetAuto();
+}
+
+/* auto */
+function startAuto(){
+auto=setInterval(()=>{
+index=(index+1)%total;
+requestAnimationFrame(updateSlider);
+},1500);
+}
+
+function resetAuto(){
+clearInterval(auto);
+startAuto();
+}
+
+/* pause hover */
+document.querySelector(".slider-wrapper")
+.addEventListener("mouseenter",()=>clearInterval(auto));
+
+document.querySelector(".slider-wrapper")
+.addEventListener("mouseleave",()=>startAuto());
+
+requestAnimationFrame(updateSlider);
+startAuto();
+
+</script>
+
+</body>
+</html>

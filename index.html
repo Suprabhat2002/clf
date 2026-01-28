@@ -1017,7 +1017,25 @@ color:var(--dark);
 background:var(--gold);
 color:black;
 }
+@media (max-width: 768px){
 
+  .slider-track{
+    justify-content:center;
+  }
+
+  /* hide side cards */
+  .slider-card.left,
+  .slider-card.right{
+    display:none !important;
+  }
+
+  /* active card normal size */
+  .slider-card.active{
+    transform:scale(1);
+    width:90%;
+  }
+
+}
 /* ===== DOTS ===== */
 .dots{
 text-align:center;
@@ -2235,4 +2253,5 @@ startAuto();
 
 </body>
 </html>
+
 
